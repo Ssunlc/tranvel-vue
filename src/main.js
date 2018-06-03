@@ -9,6 +9,7 @@ import './assets/styles/border.css'
 import './assets/styles/iconfont.css'
 
 Vue.config.productionTip = false
+    //fastclick解决移动端300ms延迟
 fastClick.attach(document.body)
 
 /* eslint-disable no-new */
