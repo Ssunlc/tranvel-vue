@@ -1,9 +1,9 @@
 <template>
     <div>
         <city-header></city-header>
-        <city-search></city-search>
-        <city-list :hot='hotCities' :cities='cities' ></city-list>
-        <city-alphabet :cities='cities' ></city-alphabet>
+        <city-search :cities="cities" ></city-search>
+        <city-list :hot='hotCities' :cities='cities' :letter='letter' ></city-list>
+        <city-alphabet :cities='cities'  @change='hanleLetterchange' ></city-alphabet>
     </div>
 </template>
 <script>
@@ -17,7 +17,8 @@
         data () {
             return {
                 hotCities:[],
-                cities:{}
+                cities:{},
+                letter: ''
             }
         },
         components: {
@@ -35,6 +36,9 @@
                 var res = res.data;
                 this.hotCities = res.data.hotCities;
                 this.cities = res.data.cities;
+            },
+            hanleLetterchange (letter) {
+                this.letter = letter;
             }
         },
         mounted () {

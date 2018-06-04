@@ -32,4 +32,8 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 npm i better-scroll   
 import Bscroll = 'better-scroll'  
 this.scroll = Bscroll.$refs.wrapper挂载在mounted生命周期函数里  
-- 2
+- 兄弟组件间通信
+1.子组件通过$emmit触发事件传递给父组件，父组件再以绑定属性的方式把数据传递给其他子组件  
+2.创建公共实例bus的方式进行不复杂的数据传递
+- 使用scroll事件的scrollToElement()方法进行页面视口区域的“跳转”
+这里在给v-for列表渲染的li绑定ref，再用$refs拿到时其实他会变成一个数组，而不是单一的dom string，可使用[0]取值的方式拿到
