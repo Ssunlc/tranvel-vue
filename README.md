@@ -38,6 +38,6 @@ this.scroll = Bscroll.$refs.wrapper挂载在mounted生命周期函数里
 - 使用scroll事件的scrollToElement()方法进行页面视口区域的“跳转”
 这里在给v-for列表渲染的li绑定ref，再用$refs拿到时其实他会变成一个数组，而不是单一的dom string，可使用[0]取值的方式拿到
 ## 截图
-![photoShow](https://github.com/Ssunlc/todolist-vue/raw/master/pictureShow/1.png)
-![photoShow](https://github.com/Ssunlc/todolist-vue/raw/master/pictureShow/2.png)
-![photoShow](https://github.com/Ssunlc/todolist-vue/raw/master/pictureShow/3.png)
+![photoShow](https://github.com/Ssunlc/tranvel-vue/raw/master/pictureShow/1.png)
+![photoShow](https://github.com/Ssunlc/tranvel-vue/raw/master/pictureShow/2.png)
+![photoShow](https://github.com/Ssunlc/tranvel-vue/raw/master/pictureShow/3.png)
