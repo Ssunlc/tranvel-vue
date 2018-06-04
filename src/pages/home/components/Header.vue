@@ -4,7 +4,7 @@
         <div class="header-input"><span class="iconfont">&#xe632</span>输入城市/景点</div>
         <router-link to='/city' >
             <div class="header-right">
-                {{city}}
+                {{this.$store.state.city}}
                 <span class="iconfont">&#xe64a</span>
             </div>
         </router-link>
@@ -13,9 +13,6 @@
 <script>
 export default{
   name: 'HomeHeader',
-  props: {
-      city: String
-  }
 }
 </script>
 <style lang="stylus" scoped>
@@ -42,7 +39,8 @@ export default{
          color #ccc
          padding-left .2rem 
       .header-right
-         width: 1.24rem
+         min-width: 1.04rem
+         padding .1rem
          float: right 
          text-align :center
          color #fff
