@@ -24,6 +24,12 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 - axios请求数据（本地json文件模拟）
 - vuex管理
 - vue awesome swiper插件构建home-header轮播图
+
 ## 一些细节
 - 利用padding-bottom实现高度自适应占位，解决页面闪烁
-- 在swiper.vue里修改引用的vue-awesome-swiper组件，改变其样式时在style里无效，因为使用的scope，样式只在当前组件生效，在其子组件无效，使用 >>>穿透让其在子组件里生效
+- 在swiper.vue里修改引用的vue-awesome-swiper组件样式，改变其样式时在style里无效，因为使用的scope，样式只在当前组件生效，在其子组件无效，使用 >>>穿透让其在子组件里生效
+- better-scroll模拟移动端滚动条   
+npm i better-scroll   
+import Bscroll = 'better-scroll'  
+this.scroll = Bscroll.$refs.wrapper挂载在mounted生命周期函数里  
+- 2
